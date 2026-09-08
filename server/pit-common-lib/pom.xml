@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ca.bc.gov.nrs.wfone.common</groupId>
-	<artifactId>wfone-common-parent</artifactId>
+	<groupId>ca.bc.gov.mal.pit.common</groupId>
+	<artifactId>pit-common-parent</artifactId>
 	<version>1.5.0</version>
 	<packaging>pom</packaging>
-	<name>wfone-common-parent</name>
+	<name>pit-common-parent</name>
 	<modules>
-		 <module>wfone-common-model</module>
-		 <module>wfone-common-rest-common</module>
-		 <module>wfone-common-persistence</module>
-		 <module>wfone-common-service-api</module>
-		 <module>wfone-common-webade-oauth2</module>
-		 <module>wfone-common-code-persistence</module>
-		 <module>wfone-common-code-service-api</module>
-		 <module>wfone-common-code-endpoints</module>
-		 <module>wfone-common-utils</module>
-		 <module>wfone-common-rest-endpoints</module>
-		 <module>wfone-common-checkhealth</module>
-		 <module>wfone-common-rest-client</module>
-		 <module>wfone-common-http-utils</module>
-		 <module>wfone-common-webade</module>
-		 <module>wfone-common-webade-oauth2-test</module>
+		 <module>pit-common-model</module>
+		 <module>pit-common-rest-common</module>
+		 <module>pit-common-persistence</module>
+		 <module>pit-common-service-api</module>
+		 <module>pit-common-webade-oauth2</module>
+		 <module>pit-common-code-persistence</module>
+		 <module>pit-common-code-service-api</module>
+		 <module>pit-common-code-endpoints</module>
+		 <module>pit-common-utils</module>
+		 <module>pit-common-rest-endpoints</module>
+		 <module>pit-common-checkhealth</module>
+		 <module>pit-common-rest-client</module>
+		 <module>pit-common-http-utils</module>
+		 <module>pit-common-webade</module>
+		 <module>pit-common-webade-oauth2-test</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -3,12 +3,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>ca.bc.gov.nrs.wfone.common</groupId>
-		<artifactId>wfone-common-parent</artifactId>
+		<groupId>ca.bc.gov.mal.pit.common</groupId>
+		<artifactId>pit-common-parent</artifactId>
 		<version>1.5.0</version>
 	</parent>
-    <artifactId>wfone-common-code-service-api</artifactId>
-    <name>wfone-common-code-service-api</name>
+    <artifactId>pit-common-code-service-api</artifactId>
+    <name>pit-common-code-service-api</name>
     <packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,20 +16,20 @@
 	<dependencies>
 	
 		<dependency>
-			<groupId>ca.bc.gov.nrs.wfone.common</groupId>
-			<artifactId>wfone-common-service-api</artifactId>
+			<groupId>ca.bc.gov.mal.pit.common</groupId>
+			<artifactId>pit-common-service-api</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 	
 		<dependency>
-			<groupId>ca.bc.gov.nrs.wfone.common</groupId>
-			<artifactId>wfone-common-code-persistence</artifactId>
+			<groupId>ca.bc.gov.mal.pit.common</groupId>
+			<artifactId>pit-common-code-persistence</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 	
 		<dependency>
-			<groupId>ca.bc.gov.nrs.wfone.common</groupId>
-			<artifactId>wfone-common-webade</artifactId>
+			<groupId>ca.bc.gov.mal.pit.common</groupId>
+			<artifactId>pit-common-webade</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		
