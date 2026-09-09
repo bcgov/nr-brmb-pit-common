@@ -23,7 +23,7 @@ public class HierarchyImpl implements Hierarchy {
 
 	private static final long serialVersionUID = 1L;
 	
-	public static final String COMMON_NAMESPACE = "http://common.wfone.nrs.gov.bc.ca/v1/";	
+	public static final String COMMON_NAMESPACE = "http://common.pit.mal.gov.bc.ca/v1/";	
 
 	public static final String HIERARCHY_NAME = "Hierarchy";
 	public static final String HIERARCHY = COMMON_NAMESPACE + HIERARCHY_NAME;

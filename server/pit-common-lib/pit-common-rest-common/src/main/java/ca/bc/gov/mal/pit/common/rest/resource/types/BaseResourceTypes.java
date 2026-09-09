@@ -2,7 +2,7 @@ package ca.bc.gov.mal.pit.common.rest.resource.types;
 
 public class BaseResourceTypes
 {
-	public static final String COMMON_NAMESPACE = "http://common.wfone.nrs.gov.bc.ca/v1/";
+	public static final String COMMON_NAMESPACE = "http://common.pit.mal.gov.bc.ca/v1/";
 	
 	public static final String SELF = "self";
 
