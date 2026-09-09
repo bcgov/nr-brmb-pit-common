@@ -20,3 +20,6 @@ buildNumber.properties
 **/.git.bak
 compose.yaml
 local-config
+client/pit-core-lib/angular/.angular
+client/pit-core-lib/angular/dist/
+client/pit-core-lib/angular/node_modules/
