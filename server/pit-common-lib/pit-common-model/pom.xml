@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>ca.bc.gov.mal.pit.common</groupId>
 		<artifactId>pit-common-parent</artifactId>
-		<version>1.5.0</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
     <artifactId>pit-common-model</artifactId>
     <name>pit-common-model</name>
