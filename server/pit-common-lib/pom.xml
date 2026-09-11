@@ -30,6 +30,27 @@
 		<jersey-version>4.0.0-M2</jersey-version>
 		<spring-version>6.2.1</spring-version>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>nr-brmb-pit-common</name>
+			<url>${GH_PKG_URL}</url>
+ 		</repository>
+<!-- TODO: Do we need a separate SNAPSHOT repo? -->
+<!-- 
+	    <repository>
+	        <id>openshift-releases</id>
+	        <url>${RELEASE_URL}</url>
+	    </repository>
+	    <snapshotRepository>
+	        <id>openshift-snapshots</id>
+	        <url>${SNAPSHOT_URL}</url>
+	    </snapshotRepository>
+-->
+	</distributionManagement>
+
+
 	<dependencyManagement>
 		<dependencies>	
 		
