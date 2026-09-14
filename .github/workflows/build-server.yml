@@ -1,0 +1,43 @@
+name: Build Server
+run-name: Build pit-common-lib
+
+on:
+  workflow_dispatch:
+    inputs:
+      ENVIRONMENT:
+        required: false
+        type: string
+        default: DEV
+      MICROSERVICE_NAME:
+        required: false
+        type: string
+        default: pit-common-lib
+      JAVA_VERSION:
+        required: false
+        type: string
+        default: "21"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.ENVIRONMENT }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: ${{ inputs.JAVA_VERSION }}
+          distribution: 'temurin'
+
+      - name: Build with Maven and push to artifactory
+        run: |
+          export MAVEN_OPTS="-Xmx3072m -XX:MaxMetaspaceSize=512m"
+          export NODE_OPTIONS="--max-old-space-size=4096"
+          export GH_PKG_URL=${{ vars.GH_PKG_URL }}
+          mvn --settings=settings.xml --batch-mode --update-snapshots -f server/${{ inputs.MICROSERVICE_NAME }}/pom.xml -Drepo.login=${{ secrets.IDIR_AS_EMAIL }} -Drepo.password=${{ secrets.IDIR_PASSWORD }} -DghPkgRepo.login=${{ github.actor }} -DghPkgRepo.password=${{ secrets.GITHUB_TOKEN }} deploy
