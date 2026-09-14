@@ -39,5 +39,5 @@ jobs:
         run: |
           export MAVEN_OPTS="-Xmx3072m -XX:MaxMetaspaceSize=512m"
           export NODE_OPTIONS="--max-old-space-size=4096"
-          export GH_PKG_URL=${{ vars.GH_PKG_URL }}
+          export GH_PKG_MAVEN_URL=${{ vars.GH_PKG_MAVEN_URL }}
           mvn --settings=settings.xml --batch-mode --update-snapshots -f server/${{ inputs.MICROSERVICE_NAME }}/pom.xml -Drepo.login=${{ secrets.IDIR_AS_EMAIL }} -Drepo.password=${{ secrets.IDIR_PASSWORD }} -DghPkgRepo.login=${{ github.actor }} -DghPkgRepo.password=${{ secrets.GITHUB_TOKEN }} deploy
