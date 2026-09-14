@@ -1,0 +1,15 @@
+package ca.bc.gov.mal.pit.common.service.api.code.validation;
+
+import jakarta.validation.constraints.NotBlank;
+
+public interface CodeHierarchyConstraints {
+
+	@NotBlank(message=Errors.CODE_HIERARCHY_NAME_NOTBLANK, groups=CodeHierarchyConstraints.class)
+	public String getCodeHierarchyName();
+
+	@NotBlank(message=Errors.CODE_HIERARCHY_LOWER_TABLE_NAME_NOTBLANK, groups=CodeHierarchyConstraints.class)
+	public String getLowerCodeTableName();
+
+	@NotBlank(message=Errors.CODE_HIERARCHY_UPPER_TABLE_NAME_NOTBLANK, groups=CodeHierarchyConstraints.class)
+	public String getUpperCodeTableName();
+}
