@@ -1,0 +1,54 @@
+name: Build and publish client\pit-core-lib package to GitHub Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      ENVIRONMENT:
+        required: false
+        type: string
+        default: DEV
+
+env:
+  NPMRC: ${{ secrets.NPMRC }} 
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.ENVIRONMENT }}
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com  
+          scope: '@bcgov'
+
+      - name: Add .npmrc file
+        run: echo -e $NPMRC > ~/.npmrc
+
+      - name: Install dependencies for Angular project
+        run: |
+          cd client/pit-core-lib/angular
+          npm clean-install --registry=${{ vars.REGISTRY }}  
+
+      - name: Build Angular library
+        run: |
+          cd client/pit-core-lib/angular
+          npm run build
+          export VERSION_NUMBER=${{ steps.getVersion.outputs.VERSION_NUMBER }}
+          export DIST_NAME="dist/pit-common-core-lib"
+          tar -cvzf pit-common-core-lib-$VERSION_NUMBER.tgz $DIST_NAME
+
+      - name: Publish package
+        run: npm publish ./pit-common-core-lib-$VERSION_NUMBER.tgz
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
