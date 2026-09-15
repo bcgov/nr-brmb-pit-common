@@ -1,0 +1,11 @@
+name: Build Server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: do nothing
+        run: echo "hello world"
