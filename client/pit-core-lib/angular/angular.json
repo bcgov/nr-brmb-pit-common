@@ -2,25 +2,25 @@
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "version": 1,
     "newProjectRoot": "projects",
-    "defaultProject": "pit-core-ng-lib",
+    "defaultProject": "pit-common-core-lib",
     "projects": {
-        "pit-core-ng-lib": {
-            "root": "projects/pit-core-ng-lib",
-            "sourceRoot": "projects/pit-core-ng-lib/src",
+        "pit-common-core-lib": {
+            "root": "projects/pit-common-core-lib",
+            "sourceRoot": "projects/pit-common-core-lib/src",
             "projectType": "library",
             "prefix": "pit",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:ng-packagr",
                     "options": {
-                        "project": "projects/pit-core-ng-lib/ng-package.json"
+                        "project": "projects/pit-common-core-lib/ng-package.json"
                     },
                     "configurations": {
                         "production": {
-                            "tsConfig": "projects/pit-core-ng-lib/tsconfig.lib.prod.json"
+                            "tsConfig": "projects/pit-common-core-lib/tsconfig.lib.prod.json"
                         },
                         "development": {
-                            "tsConfig": "projects/pit-core-ng-lib/tsconfig.lib.json"
+                            "tsConfig": "projects/pit-common-core-lib/tsconfig.lib.json"
                         }
                     },
                     "defaultConfiguration": "production"

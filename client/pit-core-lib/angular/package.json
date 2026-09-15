@@ -1,11 +1,9 @@
 {
-    "name": "pit-core-ng-lib",
+    "name": "pit-common-core-lib",
     "version": "1.0.0-SNAPSHOT",
     "scripts": {
-        "build": "ng build --configuration production pit-core-ng-lib",
-        "publish-lib": "cd dist/pit-core-ng-lib && npm publish --loglevel silly",
-        "version-maven": "cross-env npm version $mvn_prj_vrsn.$jenkins_build --prefix=projects/pit-core-ng-lib --allow-same-version",
-        "mavenbuild": "npm run version-maven && npm run build && npm run publish-lib"
+        "build": "ng build --configuration production pit-common-core-lib",
+        "publish-lib": "cd dist/pit-common-core-lib && npm publish --loglevel silly"
     },
     "private": true,
     "devDependencies": {
@@ -20,7 +18,6 @@
         "@angular/router": "19.2.25",
         "@ngrx/store": "19.2.1",
         "angular-oauth2-oidc": "19.0.0",
-        "cross-env": "^7.0.3",
         "moment": "2.30.1",
         "ng-packagr": "19.2.2",
         "rxjs": "7.8.2",
