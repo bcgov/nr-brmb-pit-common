@@ -117,8 +117,8 @@ export class TokenService {
         
             const options = 'resizable=yes,scrollbars=yes,statusbar=yes,status=yes';
 
-            let windowObj,
-                retries = 0
+            let windowObj : Window | null
+            let retries = 0
 
             let refreshInterval = setInterval( () => {
                 

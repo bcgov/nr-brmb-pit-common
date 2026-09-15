@@ -1,11 +1,12 @@
 name: Build and publish client\pit-core-lib package to GitHub Packages
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
-      TAG:
-        required: true
+      ENVIRONMENT:
+        required: false
         type: string
+        default: DEV
 
 env:
   NPMRC: ${{ secrets.NPMRC }} 
@@ -14,6 +15,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.ENVIRONMENT }}
     permissions:
       contents: read
       packages: write
@@ -46,6 +49,6 @@ jobs:
           tar -cvzf pit-common-core-lib-$VERSION_NUMBER.tgz $DIST_NAME
 
       - name: Publish package
-        run: npm publish ./dist/pit-common-core-lib-$VERSION_NUMBER.tgz
+        run: npm publish ./pit-common-core-lib-$VERSION_NUMBER.tgz
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
