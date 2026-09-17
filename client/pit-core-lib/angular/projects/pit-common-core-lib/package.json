@@ -1,7 +1,0 @@
-{
-  "name": "@bcgov/pit-common-core-lib",
-  "version": "1.0.0",
-  "dependencies": {
-    "tslib": "^2.0.0"
-  }
-}

@@ -23,3 +23,6 @@ local-config
 client/pit-core-lib/angular/.angular
 client/pit-core-lib/angular/dist/
 client/pit-core-lib/angular/node_modules/
+client/pit-common-core-lib/angular/.angular
+client/pit-common-core-lib/angular/dist/
+client/pit-common-core-lib/angular/node_modules/
