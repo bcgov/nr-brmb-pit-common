@@ -22,6 +22,12 @@
 <profile>
 <repositories>
  <repository>
+   <snapshots />
+   <id>github</id>
+   <name>nr-brmb-pit-common</name>
+   <url>https://maven.pkg.github.com/bcgov/nr-brmb-pit-common</url>
+ </repository>
+ <repository>
    <snapshots>
      <enabled>false</enabled>
    </snapshots>
@@ -34,12 +40,6 @@
    <id>snapshots</id>
    <name>libs-snapshot</name>
    <url>https://bwa.nrs.gov.bc.ca/int/artifactory/libs-snapshot</url>
- </repository>
- <repository>
-   <snapshots />
-   <id>github</id>
-   <name>nr-brmb-pit-common</name>
-   <url>https://maven.pkg.github.com/bcgov/nr-brmb-pit-common</url>
  </repository>
 </repositories>
 <pluginRepositories>
