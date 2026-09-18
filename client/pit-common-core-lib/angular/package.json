@@ -2,8 +2,7 @@
     "name": "pit-common-core-lib",
     "version": "1.0.0-SNAPSHOT",
     "scripts": {
-        "build": "ng build --configuration production pit-common-core-lib",
-        "publish-lib": "cd dist/pit-common-core-lib && npm publish --loglevel silly"
+        "build": "ng build --configuration production pit-common-core-lib"
     },
     "private": true,
     "devDependencies": {
