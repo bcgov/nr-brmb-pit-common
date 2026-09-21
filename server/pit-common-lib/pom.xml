@@ -30,6 +30,16 @@
 		<jersey-version>4.0.0-M2</jersey-version>
 		<spring-version>6.2.1</spring-version>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>nr-brmb-pit-common</name>
+			<url>${GH_PKG_MAVEN_URL}</url>
+ 		</repository>
+	</distributionManagement>
+
+
 	<dependencyManagement>
 		<dependencies>	
 		
