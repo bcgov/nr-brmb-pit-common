@@ -41,8 +41,8 @@ jobs:
 
       - name: Add .npmrc file
         run: echo -e $NPMRC > ~/.npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies for Angular project
         run: |
