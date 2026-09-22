@@ -53,12 +53,15 @@ jobs:
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular
           npm run build
           export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
-          export DIST_NAME="dist/${{ inputs.MICROSERVICE_NAME }}"
-          tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz $DIST_NAME
+          cd ./dist/${{ inputs.MICROSERVICE_NAME }}
+          tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz --exclude=${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz .
+
+        # export DIST_NAME="dist/${{ inputs.MICROSERVICE_NAME }}"
+        # tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz $DIST_NAME
 
       - name: Publish package
         run: |
-          cd client/${{ inputs.MICROSERVICE_NAME }}/angular
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular/dist/${{ inputs.MICROSERVICE_NAME }}
           export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
           npm publish ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz
 
