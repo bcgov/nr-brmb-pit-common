@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies for Angular project
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular
-          npm clean-install
+          npm clean-install --registry=https://bwa.nrs.gov.bc.ca/int/artifactory/api/npm/nrs-virtual-npm/
         # we can specify the gov't artifactory here if needed: npm clean-install --registry=https://bwa.nrs.gov.bc.ca/int/artifactory/api/npm/nrs-virtual-npm/
 
       - name: Build Angular library
