@@ -41,15 +41,14 @@ jobs:
 
       - name: Add .npmrc file
         run: echo -e $NPMRC > ~/.npmrc
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies for Angular project
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular
           npm clean-install
-        # we can specify the gov't artifactory here if needed: npm clean-install --registry=https://bwa.nrs.gov.bc.ca/int/artifactory/api/npm/nrs-virtual-npm/
-
+        
       - name: Build Angular library
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular
@@ -58,10 +57,10 @@ jobs:
           export DIST_NAME="dist/${{ inputs.MICROSERVICE_NAME }}"
           tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-$VERSION_NUMBER.tgz $DIST_NAME
 
-      # - name: Publish package
-      #   run: npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-$VERSION_NUMBER.${{ github.run_number }}.tgz
-      #   # I have specified the publishConfig option in package json but 
-      #   # we can point npm to use the github package registry here if the above doesn't work: 
-      #   # npm publish --@bcgov:registry=https://npm.pkg.github.com
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish package
+        run: npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-$VERSION_NUMBER.${{ github.run_number }}.tgz
+        # I have specified the publishConfig option in package json but 
+        # we can point npm to use the github package registry here if the above doesn't work: 
+        # npm publish --@bcgov:registry=https://npm.pkg.github.com
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
