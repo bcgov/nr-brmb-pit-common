@@ -79,7 +79,7 @@ jobs:
           fi
 
           # 3. Publish if everything is valid
-          # npm publish "$TARBALL_PATH"
+          npm publish "$TARBALL_PATH"
 
 
         #  export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
