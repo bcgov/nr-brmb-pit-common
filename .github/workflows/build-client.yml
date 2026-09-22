@@ -58,10 +58,10 @@ jobs:
           export DIST_NAME="dist/${{ inputs.MICROSERVICE_NAME }}"
           tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-$VERSION_NUMBER.tgz $DIST_NAME
 
-      - name: Publish package
-        run: npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-$VERSION_NUMBER.${{ github.run_number }}.tgz
-        # I have specified the publishConfig option in package json but 
-        # we can point npm to use the github package registry here if the above doesn't work: 
-        # npm publish --@bcgov:registry=https://npm.pkg.github.com
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Publish package
+      #   run: npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-$VERSION_NUMBER.${{ github.run_number }}.tgz
+      #   # I have specified the publishConfig option in package json but 
+      #   # we can point npm to use the github package registry here if the above doesn't work: 
+      #   # npm publish --@bcgov:registry=https://npm.pkg.github.com
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
