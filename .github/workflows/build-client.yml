@@ -58,29 +58,9 @@ jobs:
 
       - name: Publish package
         run: |
-          # 1. Safely resolve the version variable
-          VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
-          TARBALL_PATH="client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz"
-          
-          # 2. Debugging: Print current directory and list files to see if it exists
-          echo "Current working directory: $(pwd)"
-          echo "Looking for tarball at: $TARBALL_PATH"
-          
-          if [ ! -f "$TARBALL_PATH" ]; then
-            echo "❌ ERROR: Tarball file does not exist at $TARBALL_PATH"
-            echo "Showing files in the angular directory:"
-            ls -la "client/${{ inputs.MICROSERVICE_NAME }}/angular/" || echo "Directory not found"
-            exit 1
-          fi
-
-          if [ ! -s "$TARBALL_PATH" ]; then
-            echo "❌ ERROR: Tarball file exists but is EMPTY (0 bytes)!"
-            exit 1
-          fi
-
-          # 3. Publish if everything is valid
-          npm publish "$TARBALL_PATH"
-
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular
+          export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
+          npm publish ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz
 
         #  export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
         #  npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz
