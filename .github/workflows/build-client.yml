@@ -47,23 +47,25 @@ jobs:
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular
           npm clean-install
-        
+
       - name: Build Angular library
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular
           npm run build
-          export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
-          cd ./dist/${{ inputs.MICROSERVICE_NAME }}
-          tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz --exclude=${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz .
 
-        # export DIST_NAME="dist/${{ inputs.MICROSERVICE_NAME }}"
-        # tar -cvzf ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz $DIST_NAME
+      # installs npm-snapshot package globally and 
+      # adds the build number to the snapshot version in client\pit-common-core-lib\angular\dist\pit-common-core-lib\package.json
+      # for example: 1.0.0-SNAPSHOT.123
+      - name: Set up the snapshot version
+        run: |
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular/dist/${{ inputs.MICROSERVICE_NAME }}
+          npm install -g npm-snapshot
+          npm-snapshot ${{ github.run_number }}
 
       - name: Publish package
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular/dist/${{ inputs.MICROSERVICE_NAME }}
-          export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
-          npm publish ${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz
+          npm publish
 
         #  export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
         #  npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz
