@@ -35,13 +35,9 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 22
-          # registry-url: https://npm.pkg.github.com  
-          # scope: '@bcgov'
 
       - name: Add .npmrc file
         run: echo -e $NPMRC > ~/.npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies for Angular project
         run: |
@@ -69,9 +65,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        #  export VERSION_NUMBER="${{ steps.getVersion.outputs.VERSION_NUMBER }}.${{ github.run_number }}"
-        #  npm publish client/${{ inputs.MICROSERVICE_NAME }}/angular/${{ inputs.MICROSERVICE_NAME }}-${VERSION_NUMBER}.tgz
-        # I have specified the publishConfig option in package json but 
-        # we can point npm to use the github package registry here if the above doesn't work: 
-        # npm publish --@bcgov:registry=https://npm.pkg.github.com
         
