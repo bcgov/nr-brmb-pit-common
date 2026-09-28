@@ -1,0 +1,68 @@
+name: Build and publish client\pit-core-lib package to GitHub Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      # for the ng librabry name 
+      MICROSERVICE_NAME:
+        required: true
+        type: choice
+        options:
+          - pit-common-core-lib
+          # add the second library pit-common-application-lib as an option here once it's ready
+
+env:
+  NPMRC: ${{ secrets.NPMRC }} 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: DEV
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Extract version number
+        id: getVersion
+        run: echo "VERSION_NUMBER=$(grep -Po '"version"\s*:\s*"\K[^"]+' "client/${{ inputs.MICROSERVICE_NAME }}/angular/package.json")" >> $GITHUB_OUTPUT
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Add .npmrc file
+        run: echo -e $NPMRC > ~/.npmrc
+
+      - name: Install dependencies for Angular project
+        run: |
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular
+          npm clean-install
+
+      - name: Build Angular library
+        run: |
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular
+          npm run build
+
+      # installs npm-snapshot package globally and 
+      # adds the build number to the snapshot version in client\pit-common-core-lib\angular\dist\pit-common-core-lib\package.json
+      # for example: 1.0.0-SNAPSHOT.123
+      - name: Set up the snapshot version
+        run: |
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular/dist/${{ inputs.MICROSERVICE_NAME }}
+          npm install -g npm-snapshot
+          npm-snapshot ${{ github.run_number }}
+
+      - name: Publish package
+        run: |
+          cd client/${{ inputs.MICROSERVICE_NAME }}/angular/dist/${{ inputs.MICROSERVICE_NAME }}
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        
