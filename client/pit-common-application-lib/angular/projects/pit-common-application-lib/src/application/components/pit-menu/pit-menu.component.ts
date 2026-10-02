@@ -14,37 +14,35 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     templateUrl: './pit-menu.component.html',
     styleUrls: ['./pit-menu.component.scss'],
     animations: [
-        trigger( 'menu-collapsed-expanded', [
-            state( 'collapsed', style( {
-                'width': applicationMetrics[ 0 ].variables[ '--pit-menu-collapsed-width' ]
-            } ) ),
-            state( 'expanded', style( {
-                'width': applicationMetrics[ 0 ].variables[ '--pit-menu-expanded-width' ]
-            } ) ),
-            transition( 'collapsed => expanded', [
-                animate( '0.25s' )
-            ] ),
-            transition( 'expanded => collapsed', [
-                animate( '0.25s' )
-            ] )
-        ] ),
-        trigger( 'label-collapsed-expanded', [
-            state( 'collapsed', style( {
+        trigger('menu-collapsed-expanded', [
+            state('collapsed', style({
+                'width': applicationMetrics[0].variables['--pit-menu-collapsed-width']
+            })),
+            state('expanded', style({
+                'width': applicationMetrics[0].variables['--pit-menu-expanded-width']
+            })),
+            transition('collapsed => expanded', [
+                animate('0.25s')
+            ]),
+            transition('expanded => collapsed', [
+                animate('0.25s')
+            ])
+        ]),
+        trigger('label-collapsed-expanded', [
+            state('collapsed', style({
                 'opacity': '0'
-            } ) ),
-            state( 'expanded', style( {
+            })),
+            state('expanded', style({
                 'opacity': '1'
-            } ) ),
-            transition( 'collapsed => expanded', [
-                animate( '0.25s' )
-            ] ),
-            transition( 'expanded => collapsed', [
-                animate( '0.25s' )
-            ] )
-        ] )
-
+            })),
+            transition('collapsed => expanded', [
+                animate('0.25s')
+            ]),
+            transition('expanded => collapsed', [
+                animate('0.25s')
+            ])
+        ])
     ],
-    standalone: true,
     imports: [PitIconComponent, MatMenuModule, NgForOf, NgIf, RouterModule, MatTooltipModule]
 })
 export class PitMenuComponent extends BaseComponent {

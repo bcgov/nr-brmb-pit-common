@@ -9,7 +9,6 @@ import { PitIconComponent } from '../pit-icon/pit-icon.component';
     selector: 'pit-header',
     templateUrl: './pit-header.component.html',
     styleUrls: ['./pit-header.component.scss'],
-    standalone: true,
     imports: [CommonModule, MatMenuModule, PitIconComponent, NgIf]
 })
 export class PitHeaderComponent extends BaseComponent {

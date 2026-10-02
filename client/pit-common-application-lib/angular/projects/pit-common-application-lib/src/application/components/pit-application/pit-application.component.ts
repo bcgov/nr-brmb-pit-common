@@ -26,7 +26,6 @@ import { CommonModule } from '@angular/common';
             ])
         ])
     ],
-    standalone: true,
     imports: [CommonModule]
 })
 export class PitApplicationComponent extends BaseComponent {

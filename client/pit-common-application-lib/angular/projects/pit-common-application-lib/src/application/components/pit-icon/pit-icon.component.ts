@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
     templateUrl: './pit-icon.component.html',
     styleUrls: ['./pit-icon.component.scss'],
     host: { 'class': 'mat-typography' },
-    standalone: true,
     imports: [NgIf, MatIconModule]
 })
 export class PitIconComponent {
