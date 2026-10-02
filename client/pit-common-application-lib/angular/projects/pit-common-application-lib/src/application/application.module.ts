@@ -21,18 +21,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         MatButtonModule,
         MatMenuModule,
         ScrollingModule,
-        // once the module was ingested
         PitApplicationComponent,
         PitHeaderComponent,
         PitIconComponent,
         PitMenuComponent,
     ],
-    // declarations: [
-    //     PitApplicationComponent,
-    //     PitHeaderComponent,
-    //     PitIconComponent,
-    //     PitMenuComponent,
-    // ],
     exports: [
         PitApplicationComponent,
         PitHeaderComponent,
@@ -40,9 +33,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         PitMenuComponent
     ]
 })
-export class WildfireApplicationModule {
-    static forRoot(): ModuleWithProviders<WildfireApplicationModule> {
-        // console.log('WildfireApplicationModule.forRoot')
+export class PitApplicationModule {
+    static forRoot(): ModuleWithProviders<PitApplicationModule> {
+        // console.log('PitApplicationModule.forRoot')
         const doc = window[ 'document' ]
 
         const style = doc.createElement( 'style' )
@@ -56,7 +49,7 @@ ${ m.selector } {
         doc.getElementsByTagName( 'head' )[ 0 ].appendChild( style )
 
         return {
-            ngModule: WildfireApplicationModule
+            ngModule: PitApplicationModule
         }
     }
 }
