@@ -5,7 +5,8 @@ import { WfMenuItems } from '../wf-menu/wf-menu.component';
 @Component({
     selector: 'wf-header',
     templateUrl: './wf-header.component.html',
-    styleUrls: ['./wf-header.component.scss']
+    styleUrls: ['./wf-header.component.scss'],
+    standalone: false
 })
 export class WfHeaderComponent extends BaseComponent {
     @Input() useAppLogo: boolean = true

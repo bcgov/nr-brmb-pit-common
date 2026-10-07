@@ -6,6 +6,7 @@ import { WfMenuItem, WfMenuItems } from "../wf-menu/wf-menu.component";
     selector: 'wf-footer',
     templateUrl: './wf-footer.component.html',
     styleUrls: ['./wf-footer.component.scss'],
+    standalone: false
 })
 export class WfFooterComponent extends BaseComponent {
     _menu: WfMenuItems

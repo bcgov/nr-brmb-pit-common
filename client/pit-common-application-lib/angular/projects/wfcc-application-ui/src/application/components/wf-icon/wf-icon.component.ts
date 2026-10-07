@@ -6,7 +6,8 @@ import { DomSanitizer } from '@angular/platform-browser';
     selector: 'wf-icon',
     templateUrl: './wf-icon.component.html',
     styleUrls: ['./wf-icon.component.scss'],
-    host: { 'class': 'mat-typography' }
+    host: { 'class': 'mat-typography' },
+    standalone: false
 })
 export class WfIconComponent {
     @Input() iconName: string

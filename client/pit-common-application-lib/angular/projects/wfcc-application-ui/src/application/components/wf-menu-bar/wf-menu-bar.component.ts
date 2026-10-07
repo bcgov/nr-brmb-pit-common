@@ -8,6 +8,7 @@ import { WfMenuItem, WfMenuItems } from "../wf-menu/wf-menu.component";
     selector: 'wf-menu-bar',
     templateUrl: './wf-menu-bar.component.html',
     styleUrls: ['./wf-menu-bar.component.scss'],
+    standalone: false
 })
 export class WfMenuBarComponent extends BaseComponent {
     _menu: WfMenuItems

@@ -24,7 +24,8 @@ import { BaseComponent } from '../base.component';
                 animate('0.25s')
             ])
         ])
-    ]
+    ],
+    standalone: false
 })
 export class WfApplicationComponent extends BaseComponent {
     @Input() isInitializing: boolean = false

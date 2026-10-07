@@ -10,36 +10,36 @@ import { applicationMetrics } from '../../application.metrics';
     templateUrl: './wf-menu.component.html',
     styleUrls: ['./wf-menu.component.scss'],
     animations: [
-        trigger( 'menu-collapsed-expanded', [
-            state( 'collapsed', style( {
-                'width': applicationMetrics[ 0 ].variables[ '--wf-menu-collapsed-width' ]
-            } ) ),
-            state( 'expanded', style( {
-                'width': applicationMetrics[ 0 ].variables[ '--wf-menu-expanded-width' ]
-            } ) ),
-            transition( 'collapsed => expanded', [
-                animate( '0.25s' )
-            ] ),
-            transition( 'expanded => collapsed', [
-                animate( '0.25s' )
-            ] )
-        ] ),
-        trigger( 'label-collapsed-expanded', [
-            state( 'collapsed', style( {
+        trigger('menu-collapsed-expanded', [
+            state('collapsed', style({
+                'width': applicationMetrics[0].variables['--wf-menu-collapsed-width']
+            })),
+            state('expanded', style({
+                'width': applicationMetrics[0].variables['--wf-menu-expanded-width']
+            })),
+            transition('collapsed => expanded', [
+                animate('0.25s')
+            ]),
+            transition('expanded => collapsed', [
+                animate('0.25s')
+            ])
+        ]),
+        trigger('label-collapsed-expanded', [
+            state('collapsed', style({
                 'opacity': '0'
-            } ) ),
-            state( 'expanded', style( {
+            })),
+            state('expanded', style({
                 'opacity': '1'
-            } ) ),
-            transition( 'collapsed => expanded', [
-                animate( '0.25s' )
-            ] ),
-            transition( 'expanded => collapsed', [
-                animate( '0.25s' )
-            ] )
-        ] )
-
-    ]
+            })),
+            transition('collapsed => expanded', [
+                animate('0.25s')
+            ]),
+            transition('expanded => collapsed', [
+                animate('0.25s')
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class WfMenuComponent extends BaseComponent {
     _menu: WfMenuItems
