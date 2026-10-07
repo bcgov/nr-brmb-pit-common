@@ -5,7 +5,6 @@
     "entryFile": "src/public-api.ts"
   },
   "assets": [
-      "splash-screen/**",
       "bc-sans/**",
       "styles/**"
   ]
