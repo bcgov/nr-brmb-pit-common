@@ -1,0 +1,17 @@
+<form>
+  <input type="text"
+      (input)="onInput($event)"
+      matInput
+      [formControl]="formControl"
+      [matAutocomplete]="auto"
+      placeholder="{{ placeholderText }}">
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="selectedOptionDisplay">
+    <mat-option *ngIf="showPreview" [value]="searchText">{{ previewText }}</mat-option>
+    <div *ngIf="isSearcheable" class="select-text">{{ selectText }}</div>
+    <mat-option 
+      *ngFor="let option of options" 
+      [value]="option">
+      {{ displayOption(option) }}
+    </mat-option>
+  </mat-autocomplete>
+</form>

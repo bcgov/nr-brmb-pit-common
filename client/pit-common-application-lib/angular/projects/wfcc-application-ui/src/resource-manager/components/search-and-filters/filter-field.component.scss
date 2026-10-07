@@ -1,0 +1,142 @@
+:host {
+    // flex: 0 0 var( --wf-filter-field-width );
+    width: var( --wf-filter-field-width );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+mat-label {
+    font-family: var( --wf-font-family-main );
+    font-weight: var( --wf-font-family-main );
+    padding: 5px 1.5px;
+}
+
+.field {
+    position: relative;
+
+    ::ng-deep {
+        input {
+            font-size: var( --wf-font-size );
+            font-family: var( --wf-font-family-main );
+        }
+
+        select.mat-mdc-input-element {
+            background-color: var( --wf-colour-white );
+            height: 37.5px;
+            top: 0;
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 0;
+            -webkit-appearance: menulist;
+
+            &.none-selected {
+                color: #6a6a6a;
+            }
+        }
+
+        .ms-parent {
+            width: var( --wf-filter-field-width ) !important;
+
+            .ms-choice {
+                height: 37.5px;
+                line-height: 37.5px;
+                width: var( --wf-filter-field-width );
+                border: 1px solid var( --wf-colour-light-grey );
+                padding: 0 5px;
+                border-radius: var( --wf-border-radius );
+                font-family: var( --wf-font-family-main );
+                font-size: var( --wf-font-size );
+                color: inherit;
+
+                .placeholder {
+                    color: #6a6a6a;
+                }
+
+                .icon-caret {
+                    margin-top: -5px;
+                    border-width: 9px 6px 0 6px;
+
+                    &.open {
+                        border-width: 0 6px 9px 6px;
+                    }
+                }
+            }
+
+            .ms-drop {
+                &.bottom {
+                    width: unset !important;
+                    max-width: 400px;
+                }
+
+                ul {
+                    li label input {
+                        margin-top: -8px !important;
+                    }
+
+                    li.hide-radio label {
+                        text-overflow: ellipsis;
+                        overflow-x: hidden;
+                    }
+                }
+
+                .ms-search {
+                    width: calc(100% - 6px);
+                    border-radius: var( --wf-border-radius );
+                    font-family: var( --wf-font-family-main );
+                    font-size: var( --wf-font-size );
+
+                    input {
+                        width: inherit;
+                        font-family: var( --wf-font-family-main );
+                        font-size: var( --wf-font-size );
+
+                        &:focus {
+                            outline: none;
+                            box-shadow: 0 0 4px #3E7FFF;
+                        }
+                    }
+                }
+            }
+        }
+
+        textarea,
+        input,
+        mat-checkbox.mat-mdc-checkbox,
+        select {
+            border: 1px solid var( --wf-colour-light-grey );
+            padding: 0 5px;
+            border-radius: var( --wf-border-radius );
+            height: 36.5px;
+            line-height: 36.5px;
+            font-family: var( --wf-font-family-main );
+            font-size: var( --wf-font-size );
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 4px #3E7FFF;
+            }
+        }
+
+        input[readonly="true"],
+        select[readonly="true"],
+        input:disabled,
+        select:disabled {
+            background-color: var( --wf-colour-disabled-background ) !important;
+        }
+        /* TODO(mdc-migration): The following rule targets internal classes of checkbox that may no longer apply for the MDC version. */
+        mat-checkbox .mat-checkbox-frame {
+            background-color: var( --wf-colour-white );
+            border: 1px solid var( --wf-colour-light-grey );
+            border-radius: var( --wf-border-radius );
+        }
+    }
+
+    .sub-label {
+        position: absolute;
+        top: 35px;
+        font-size: 12px;
+        color: #999;
+    }
+}

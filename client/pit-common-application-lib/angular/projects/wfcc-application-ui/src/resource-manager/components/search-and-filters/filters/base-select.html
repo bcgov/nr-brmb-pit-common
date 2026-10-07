@@ -1,0 +1,44 @@
+<ng-container *ngIf="!multi">
+    <wf-filter-field [label]="label">
+        <select 
+            appWFSingleSelect 
+            [appWFPlaceholder]="placeholder"
+            [attr.aria-label]="title"
+            [options]="options"
+            [selected]="selectedValue"
+            [filter]="filter"
+            (updated)="onUpdated( [ $event ] )"
+        >
+            <option value="">
+                <span class="placeholder">{{ placeholder }}</span>
+            </option>
+            <option *ngFor="let o of options" 
+                value="{{ optionCode( o ) }}"
+            >
+                <span>{{ optionDescription( o ) }}</span>
+            </option>
+        </select>
+    </wf-filter-field>
+</ng-container>
+
+<ng-container *ngIf="multi">
+    <wf-filter-field [label]="label" [subLabel]="subLabel">
+        <select                         
+            appWFMultiSelect multiple="multiple"
+            [appWFPlaceholder]="placeholder"
+            [attr.aria-label]="title"
+            [options]="options"
+            [selected]="selectedValues"
+            [filter]="filter"
+            (updated)="onUpdated( $event )"
+            [maxSelect]="maxSelect"
+            [showSelectAll]="selectAll"
+        >
+            <option *ngFor="let o of options" 
+                value="{{ optionCode( o ) }}"
+            >
+                <span>{{ optionDescription( o ) }}</span>
+            </option>
+        </select>
+    </wf-filter-field>
+</ng-container>

@@ -1,0 +1,12 @@
+{
+  "name": "@wf1/wfcc-application-ui",
+  "version": "1.4.0",
+  "dependencies": {
+    "tslib": "^2.5.1"
+  },
+  "exports": {
+    ".": {
+        "sass": "./styles/_multiple-select.scss"
+    }
+  }
+}

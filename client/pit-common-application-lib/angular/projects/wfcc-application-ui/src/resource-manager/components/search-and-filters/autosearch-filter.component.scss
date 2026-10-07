@@ -1,0 +1,25 @@
+.select-text {
+  font-family: var(--mat-option-label-text-font);
+  margin-left: 5px;
+}
+
+input {
+    padding: 0;
+    border: 1px solid var( --wf-colour-light-grey );
+    border-radius: var( --wf-border-radius );
+    height: 35px;
+    line-height: 35px;
+    font-family: var( --wf-font-family-main );
+    font-size: var( --wf-font-size );
+}
+
+::ng-deep { 
+
+  mat-pseudo-checkbox {
+    display: none !important;
+  }
+
+  mat-option div {
+    color: var(--mat-option-label-text-color);
+  }
+}

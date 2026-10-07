@@ -1,0 +1,40 @@
+:host {
+    background-color: var( --wf-footer-background-color  ) ;
+    display: flex;
+
+    .header {
+        display: none;
+    }
+
+    .body {
+        .nav-items {
+            padding: 15px 0;
+            a.nav-item {
+                text-decoration: none;
+                display: inline-flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 15px;
+                cursor: pointer;
+                height: var( --wf-menu-bar-item-row-height );
+                border-right: 1px solid var( --wf-menu-bar-divider-color ) ;
+                wf-icon {
+                    color: var( --wf-menu-icon-color );
+                }
+
+                .label {
+                    color: white;
+                    min-width: 120px;
+                    text-align: center;
+                }
+
+            }
+
+            a.nav-item:hover {
+                text-decoration: underline;
+                color:white
+            }
+        }
+    }
+}

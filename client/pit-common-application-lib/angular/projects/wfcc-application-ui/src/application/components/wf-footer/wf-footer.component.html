@@ -1,0 +1,14 @@
+<div class="body">
+    <div class="nav-items">
+        <ng-container *ngFor="let item of footerItems">
+            <ng-container *ngIf="item.type == 'router-link'">
+                <a class="nav-item"
+                    [routerLink]="item.route"
+                    (click)="onItemClick( item )"
+                >
+                    <span class="label">{{ item.title }}</span>
+                </a>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

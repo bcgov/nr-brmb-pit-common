@@ -1,0 +1,46 @@
+{
+  "name": "wfcc-application-ui",
+  "version": "1.4.0",
+  "scripts": {
+    "#version-now": "node -pe 'require(\"projects/wfcc-application-ui/package.json\").version'",
+    "#version-rc": "cd projects/wfcc-application-ui && npm version prerelease --preid=rc",
+    "#version-patch": "cd projects/wfcc-application-ui && npm version patch",
+    "#version-minor": "cd projects/wfcc-application-ui && npm version minor",
+    "#version-major": "cd projects/wfcc-application-ui && npm version major",
+    "build": "ng build --configuration production wfcc-application-ui",
+    "publish-lib": "cd dist/wfcc-application-ui && npm publish --loglevel silly",
+    "version-maven": "cross-env npm version $mvn_prj_vrsn.$jenkins_build --prefix=projects/wfcc-application-ui --allow-same-version",
+    "mavenbuild": "npm run version-maven && npm run build && npm run publish-lib"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.2.9",
+    "@angular/cdk": "^15.2.9",
+    "@angular/common": "^15.2.9",
+    "@angular/compiler": "^15.2.9",
+    "@angular/core": "^15.2.9",
+    "@angular/forms": "^15.2.9",
+    "@angular/material": "^15.2.9",
+    "@angular/platform-browser": "^15.2.9",
+    "@angular/router": "^15.2.9",
+    "rxjs": "~7.8.0",
+    "tslint": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.8",
+    "@angular/cli": "^15.2.8",
+    "@angular/compiler-cli": "^15.2.9",
+    "@types/body-parser": "^1.19.2",
+    "@types/jasmine": "~4.3.0",
+    "cross-env": "^7.0.3",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "^2.0.0",
+    "ng-packagr": "^15.2.2",
+    "typescript": "~4.8.4"
+  }
+}
