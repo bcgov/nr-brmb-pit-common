@@ -4,16 +4,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-
-
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { applicationMetrics } from './application.metrics';
 import { WfApplicationComponent } from './components/wf-application/wf-application.component';
-import { WfFooterComponent } from './components/wf-footer/wf-footer.component';
 import { WfHeaderComponent } from './components/wf-header/wf-header.component';
 import { WfIconComponent } from './components/wf-icon/wf-icon.component';
-import { WfMenuBarComponent } from './components/wf-menu-bar/wf-menu-bar.component';
 import { WfMenuComponent } from './components/wf-menu/wf-menu.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
@@ -25,23 +20,17 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         RouterModule,
         MatButtonModule,
         MatMenuModule,
-        ScrollingModule
-        // BrowserAnimationsModule
-        ,
+        ScrollingModule,
         WfApplicationComponent,
-        WfFooterComponent,
         WfHeaderComponent,
         WfIconComponent,
-        WfMenuComponent,
-        WfMenuBarComponent
+        WfMenuComponent
     ],
     exports: [
         WfApplicationComponent,
-        WfFooterComponent,
         WfHeaderComponent,
         WfIconComponent,
         WfMenuComponent,
-        WfMenuBarComponent,
     ]
 })
 export class WildfireApplicationModule {
