@@ -1,5 +1,5 @@
 <div class="header">
-    <ng-content select="wf-header"></ng-content>
+    <ng-content select="pit-header"></ng-content>
 </div>
 
 <div class="body">
@@ -11,7 +11,7 @@
         <div class="backdrop" (click)="onBackdropClick()"></div>
 
         <div class="menu" [@menu-collapsed-expanded]="menuState">
-            <ng-content select="wf-menu"></ng-content>
+            <ng-content select="pit-menu"></ng-content>
         </div>
     </ng-container>
 </div>

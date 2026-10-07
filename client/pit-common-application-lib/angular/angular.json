@@ -3,21 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wfcc-application-ui": {
+    "pit-common-application-lib": {
       "projectType": "library",
-      "root": "projects/wfcc-application-ui",
-      "sourceRoot": "projects/wfcc-application-ui/src",
+      "root": "projects/pit-common-application-lib",
+      "sourceRoot": "projects/pit-common-application-lib/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "options": {
-            "tsConfig": "projects/wfcc-application-ui/tsconfig.lib.json",
-            "project": "projects/wfcc-application-ui/ng-package.json"
+            "tsConfig": "projects/pit-common-application-lib/tsconfig.lib.json",
+            "project": "projects/pit-common-application-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/wfcc-application-ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/pit-common-application-lib/tsconfig.lib.prod.json"
             }
           },
           "defaultConfiguration": "production"

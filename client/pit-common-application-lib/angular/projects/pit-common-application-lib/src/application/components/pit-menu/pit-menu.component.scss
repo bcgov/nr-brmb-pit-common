@@ -23,13 +23,13 @@
                 padding-left: 50px;
             }
 
-            padding-right: var(--wf-gutter);
+            padding-right: var(--pit-gutter);
         }
     }
 }
 
 :host {
-    background-color: var( --wf-menu-background-color );
+    background-color: var( --pit-menu-background-color );
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -63,28 +63,28 @@
                 padding-left: 12px;
                 text-decoration: none;
                 cursor: pointer;
-                height: var( --wf-menu-item-row-height );
+                height: var( --pit-menu-item-row-height );
 
-                wf-icon {
-                    color: var( --wf-menu-icon-color );
+                pit-icon {
+                    color: var( --pit-menu-icon-color );
                 }
 
                 .label {
                     margin-left: 10px;
-                    color: var( --wf-menu-color );
+                    color: var( --pit-menu-color );
                     min-width: 200px;
                 }
 
                 &:hover {
-                    background: var( --wf-menu-highlight-background-color );
-                    font-weight: var( --wf-menu-active-font-weight );
+                    background: var( --pit-menu-highlight-background-color );
+                    font-weight: var( --pit-menu-active-font-weight );
                 }
                 &.active {
-                    font-weight: var( --wf-menu-active-font-weight );
-                    color: var( --wf-menu-active-color );
-                    background: var( --wf-menu-active-background-color );
+                    font-weight: var( --pit-menu-active-font-weight );
+                    color: var( --pit-menu-active-color );
+                    background: var( --pit-menu-active-background-color );
                     .label{
-                        color: var(--wf-header-background-color);
+                        color: var(--pit-header-background-color);
                     }
                 }
             }
@@ -103,8 +103,8 @@
             cursor: pointer;
 
             &:hover {
-                background: var( --wf-menu-highlight-background-color );
-                outline: 8px solid var( --wf-menu-highlight-background-color );
+                background: var( --pit-menu-highlight-background-color );
+                outline: 8px solid var( --pit-menu-highlight-background-color );
             }
         }
 
@@ -188,7 +188,7 @@
                 top: -23px;
                 right: 0;
                 font-size: 12px;
-                color: var( --wf-header-environment-color );
+                color: var( --pit-header-environment-color );
             }
         }
     }
@@ -207,8 +207,8 @@
             border-bottom: 1px solid #ddd;
             min-height: 32px;
             height: unset;
-            padding: 0 var(--wf-gutter);
-            width: calc(100% - var(--wf-gutter)*2);
+            padding: 0 var(--pit-gutter);
+            width: calc(100% - var(--pit-gutter)*2);
 
             .userNameWrapper{
                 display: flex;
@@ -224,7 +224,7 @@
                 font-size: 13px;
             }
 
-            wf-icon {
+            pit-icon {
                 margin-right: 6px;
             }
         }
@@ -237,7 +237,7 @@
     }
 }
 
-::ng-deep .mat-mdc-tooltip-panel .mat-tooltip.wf-menu-tooltip {
+::ng-deep .mat-mdc-tooltip-panel .mat-tooltip.pit-menu-tooltip {
     background-color: gray;
     color: white !important;
     padding: 8px;

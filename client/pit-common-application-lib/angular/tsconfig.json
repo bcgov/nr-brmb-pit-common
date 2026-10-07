@@ -3,9 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@wf1/wfcc-application-ui": [
-        "dist/wf1/wfcc-application-ui/wf1-wfcc-application-ui",
-        "dist/wf1/wfcc-application-ui"
+      "@bcgov/pit-common-application-lib": [
+        "dist/bcgov/pit-common-application-lib/bcgov-pit-common-application-lib",
+        "dist/bcgov/pit-common-application-lib"
       ]
     },
     "baseUrl": "./",

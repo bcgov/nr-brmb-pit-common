@@ -1,14 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BaseComponent } from '../base.component';
-import { WfMenuItems } from '../wf-menu/wf-menu.component';
+import { WfMenuItems } from '../pit-menu/pit-menu.component';
 import { NgIf, NgFor } from '@angular/common';
 import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
-import { WfIconComponent } from '../wf-icon/wf-icon.component';
+import { WfIconComponent } from '../pit-icon/pit-icon.component';
 
 @Component({
-    selector: 'wf-header',
-    templateUrl: './wf-header.component.html',
-    styleUrls: ['./wf-header.component.scss'],
+    selector: 'pit-header',
+    templateUrl: './pit-header.component.html',
+    styleUrls: ['./pit-header.component.scss'],
     imports: [NgIf, MatMenuTrigger, WfIconComponent, MatMenu, NgFor, MatMenuItem]
 })
 export class WfHeaderComponent extends BaseComponent {

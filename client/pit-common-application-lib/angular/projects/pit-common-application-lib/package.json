@@ -1,5 +1,5 @@
 {
-  "name": "@wf1/wfcc-application-ui",
+  "name": "@bcgov/pit-common-application-lib",
   "version": "1.4.0",
   "dependencies": {
     "tslib": "^2.5.1"

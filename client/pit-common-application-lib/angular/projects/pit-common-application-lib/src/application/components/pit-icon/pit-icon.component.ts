@@ -4,9 +4,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { NgIf } from '@angular/common';
 
 @Component({
-    selector: 'wf-icon',
-    templateUrl: './wf-icon.component.html',
-    styleUrls: ['./wf-icon.component.scss'],
+    selector: 'pit-icon',
+    templateUrl: './pit-icon.component.html',
+    styleUrls: ['./pit-icon.component.scss'],
     host: { 'class': 'mat-typography' },
     imports: [NgIf, MatIcon]
 })

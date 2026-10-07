@@ -1,10 +1,10 @@
 :host {
-    color: var( --wf-header-color );
-    background-color: var( --wf-header-background-color );
-    border-bottom: var( --wf-header-border-color );
+    color: var( --pit-header-color );
+    background-color: var( --pit-header-background-color );
+    border-bottom: var( --pit-header-border-color );
     border-bottom-style: solid;
     border-bottom-width: 2px;
-    height: var( --wf-header-height );
+    height: var( --pit-header-height );
     display: flex;
     align-items: center;
     position: relative;
@@ -20,17 +20,17 @@
         align-items: center;
 
         width: 50%;
-        padding-left: var(--wf-gutter);
+        padding-left: var(--pit-gutter);
         overflow-x: visible;
 
-        .bcwfservice-logo {
+        .bcservice-logo {
             display: inline-block;
-            background-image: url( './images/bcwfservice-logo.png' );
-            background-size: auto var( --wf-header-bcwfservice-logo-height );
+            background-image: url( './images/bcservice-logo.png' );
+            background-size: auto var( --pit-header-bcservice-logo-height );
             background-position: left center;
             background-repeat: no-repeat;
-            height: var( --wf-header-bcwfservice-logo-height );
-            width: calc( var( --wf-header-bcwfservice-logo-height ) * 3.75 );
+            height: var( --pit-header-bcservice-logo-height );
+            width: calc( var( --pit-header-bcservice-logo-height ) * 3.75 );
         }
     }
 
@@ -40,16 +40,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-
-        .wildfire1-logo {
-            display: inline-block;
-            background-image: url( './images/wildfire-one-logo-text-horizontal-light.png' );
-            background-size: auto var( --wf-header-wildfire1-logo-height );
-            background-position: center;
-            background-repeat: no-repeat;
-            height: var( --wf-header-wildfire1-logo-height );
-            width: calc( var( --wf-header-wildfire1-logo-height ) * 4 );
-        }
 
         .separator {
             border-left: 1px solid white;
@@ -65,7 +55,7 @@
 
         .environment {
             font-size: 15px;
-            color: var( --wf-header-environment-color );
+            color: var( --pit-header-environment-color );
             margin-bottom: 10px;
             margin-left: 5px;
         }
@@ -78,7 +68,7 @@
         align-items: flex-end;
 
         width: 50%;
-        padding-right: var(--wf-gutter);
+        padding-right: var(--pit-gutter);
 
         .row {
             display: flex;
@@ -143,7 +133,7 @@
     .menu {
         display: flex;
         z-index: 1;
-        padding-right: var(--wf-gutter);
+        padding-right: var(--pit-gutter);
         width: 50%;
         justify-content: flex-end;
     }

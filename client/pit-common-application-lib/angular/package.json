@@ -1,8 +1,8 @@
 {
-  "name": "wfcc-application-ui",
+  "name": "pit-common-application-lib",
   "version": "1.4.0",
   "scripts": {
-    "build": "ng build --configuration production wfcc-application-ui"
+    "build": "ng build --configuration production pit-common-application-lib"
   },
   "private": true,
   "dependencies": {
