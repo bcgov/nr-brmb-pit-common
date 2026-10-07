@@ -1,9 +1,12 @@
 import { Component, EventEmitter, HostBinding, Input, Output } from "@angular/core";
-import { NavigationEnd, Router, UrlTree } from "@angular/router";
+import { NavigationEnd, Router, UrlTree, RouterLink as RouterLink_1 } from "@angular/router";
 import { WfMenuState } from "../../application.config";
 import { BaseComponent } from "../base.component";
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { applicationMetrics } from '../../application.metrics';
+import { NgFor, NgIf } from "@angular/common";
+import { MatTooltip } from "@angular/material/tooltip";
+import { WfIconComponent } from "../wf-icon/wf-icon.component";
 
 @Component({
     selector: 'wf-menu',
@@ -39,7 +42,7 @@ import { applicationMetrics } from '../../application.metrics';
             ])
         ])
     ],
-    standalone: false
+    imports: [NgFor, NgIf, RouterLink_1, MatTooltip, WfIconComponent]
 })
 export class WfMenuComponent extends BaseComponent {
     _menu: WfMenuItems

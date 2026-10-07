@@ -1,14 +1,15 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { NavigationEnd, Router, UrlTree } from "@angular/router";
+import { NavigationEnd, Router, UrlTree, RouterLink } from "@angular/router";
 import { WfMenuState } from "../../application.config";
 import { BaseComponent } from "../base.component";
 import { WfMenuItem, WfMenuItems } from "../wf-menu/wf-menu.component";
+import { NgFor, NgIf } from "@angular/common";
 
 @Component({
     selector: 'wf-menu-bar',
     templateUrl: './wf-menu-bar.component.html',
     styleUrls: ['./wf-menu-bar.component.scss'],
-    standalone: false
+    imports: [NgFor, NgIf, RouterLink]
 })
 export class WfMenuBarComponent extends BaseComponent {
     _menu: WfMenuItems

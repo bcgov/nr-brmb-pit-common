@@ -2,6 +2,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, HostBinding, Input } from '@angular/core';
 import { applicationMetrics } from '../../application.metrics';
 import { BaseComponent } from '../base.component';
+import { NgIf } from '@angular/common';
+import { CdkScrollable } from '@angular/cdk/scrolling';
 
 @Component({
     selector: 'wf-application',
@@ -25,7 +27,7 @@ import { BaseComponent } from '../base.component';
             ])
         ])
     ],
-    standalone: false
+    imports: [NgIf, CdkScrollable]
 })
 export class WfApplicationComponent extends BaseComponent {
     @Input() isInitializing: boolean = false

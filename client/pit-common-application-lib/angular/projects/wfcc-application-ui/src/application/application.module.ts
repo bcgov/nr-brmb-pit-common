@@ -27,14 +27,13 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         MatMenuModule,
         ScrollingModule
         // BrowserAnimationsModule
-    ],
-    declarations: [
+        ,
         WfApplicationComponent,
         WfFooterComponent,
         WfHeaderComponent,
         WfIconComponent,
         WfMenuComponent,
-        WfMenuBarComponent,
+        WfMenuBarComponent
     ],
     exports: [
         WfApplicationComponent,

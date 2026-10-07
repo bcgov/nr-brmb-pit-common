@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
+import { MatIconRegistry, MatIcon } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'wf-icon',
     templateUrl: './wf-icon.component.html',
     styleUrls: ['./wf-icon.component.scss'],
     host: { 'class': 'mat-typography' },
-    standalone: false
+    imports: [NgIf, MatIcon]
 })
 export class WfIconComponent {
     @Input() iconName: string
