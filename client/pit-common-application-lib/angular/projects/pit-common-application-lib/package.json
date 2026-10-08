@@ -1,0 +1,19 @@
+{
+  "name": "@bcgov/pit-common-application-lib",
+  "version": "1.0.0-SNAPSHOT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcgov/nr-brmb-pit-common.git"
+  },
+  "dependencies": {
+    "tslib": "^2.5.1"
+  },
+  "exports": {
+    ".": {
+        "sass": "./styles/_multiple-select.scss"
+    }
+  }
+}
