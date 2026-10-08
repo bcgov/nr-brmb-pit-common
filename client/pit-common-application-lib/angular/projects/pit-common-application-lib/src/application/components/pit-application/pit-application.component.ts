@@ -29,7 +29,7 @@ import { CdkScrollable } from '@angular/cdk/scrolling';
     ],
     imports: [NgIf, CdkScrollable]
 })
-export class WfApplicationComponent extends BaseComponent {
+export class PitApplicationComponent extends BaseComponent {
     @Input() isInitializing: boolean = false
 
     @HostBinding('class') get deviceClass() {

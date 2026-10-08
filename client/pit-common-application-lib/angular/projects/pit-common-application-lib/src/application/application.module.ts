@@ -6,10 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { applicationMetrics } from './application.metrics';
-import { WfApplicationComponent } from './components/pit-application/pit-application.component';
-import { WfHeaderComponent } from './components/pit-header/pit-header.component';
-import { WfIconComponent } from './components/pit-icon/pit-icon.component';
-import { WfMenuComponent } from './components/pit-menu/pit-menu.component';
+import { PitApplicationComponent } from './components/pit-application/pit-application.component';
+import { PitHeaderComponent } from './components/pit-header/pit-header.component';
+import { PitIconComponent } from './components/pit-icon/pit-icon.component';
+import { PitMenuComponent } from './components/pit-menu/pit-menu.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
@@ -21,20 +21,20 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         MatButtonModule,
         MatMenuModule,
         ScrollingModule,
-        WfApplicationComponent,
-        WfHeaderComponent,
-        WfIconComponent,
-        WfMenuComponent
+        PitApplicationComponent,
+        PitHeaderComponent,
+        PitIconComponent,
+        PitMenuComponent
     ],
     exports: [
-        WfApplicationComponent,
-        WfHeaderComponent,
-        WfIconComponent,
-        WfMenuComponent,
+        PitApplicationComponent,
+        PitHeaderComponent,
+        PitIconComponent,
+        PitMenuComponent,
     ]
 })
-export class WildfireApplicationModule {
-    static forRoot(): ModuleWithProviders<WildfireApplicationModule> {
+export class PitApplicationModule {
+    static forRoot(): ModuleWithProviders<PitApplicationModule> {
         // console.log('WildfireApplicationModule.forRoot')
         const doc = window[ 'document' ]
 
@@ -49,7 +49,7 @@ ${ m.selector } {
         doc.getElementsByTagName( 'head' )[ 0 ].appendChild( style )
 
         return {
-            ngModule: WildfireApplicationModule
+            ngModule: PitApplicationModule
         }
     }
 }

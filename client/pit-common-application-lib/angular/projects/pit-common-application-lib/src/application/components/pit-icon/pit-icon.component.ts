@@ -10,7 +10,7 @@ import { NgIf } from '@angular/common';
     host: { 'class': 'mat-typography' },
     imports: [NgIf, MatIcon]
 })
-export class WfIconComponent {
+export class PitIconComponent {
     @Input() iconName: string
     @Input() iconSize: 'small' | 'medium' | 'large' = 'medium'
 
@@ -43,12 +43,12 @@ export class WfIconComponent {
         return this.iconName
     }
 
-    get isWfApplicationIcon() {
+    get isPitApplicationIcon() {
         return this.iconName.startsWith('wf/')
     }
 
     get isMatIcon() {
-        return !this.isWfApplicationIcon
+        return !this.isPitApplicationIcon
     }
 
     get sizeSmall() {
