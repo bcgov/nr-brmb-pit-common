@@ -1,6 +1,6 @@
 {
   "name": "pit-common-application-lib",
-  "version": "1.4.0",
+  "version": "1.0.0-SNAPSHOT",
   "scripts": {
     "build": "ng build --configuration production pit-common-application-lib"
   },

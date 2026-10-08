@@ -46,6 +46,6 @@ export class PitHeaderComponent extends BaseComponent {
     }
 
     get bcLogoClickEnable() {
-        return this.bcLogoClick.observers.length > 0
+        return this.bcLogoClick.observed // True if the parent binds to (bcLogoClick)="someMethod($event)"
     }
 }

@@ -23,14 +23,14 @@
         padding-left: var(--pit-gutter);
         overflow-x: visible;
 
-        .bcservice-logo {
+        .bc-service-logo {
             display: inline-block;
-            background-image: url( './images/bcservice-logo.png' );
-            background-size: auto var( --pit-header-bcservice-logo-height );
+            background-image: url( './images/bcgov-logo.png' );
+            background-size: auto auto;
             background-position: left center;
             background-repeat: no-repeat;
-            height: var( --pit-header-bcservice-logo-height );
-            width: calc( var( --pit-header-bcservice-logo-height ) * 3.75 );
+            height: var( --pit-header-bc-service-logo-height );
+            width: calc(var(--pit-header-bc-service-logo-height) * 5);
         }
     }
 

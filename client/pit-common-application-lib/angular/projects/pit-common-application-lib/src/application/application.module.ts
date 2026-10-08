@@ -35,7 +35,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 })
 export class PitApplicationModule {
     static forRoot(): ModuleWithProviders<PitApplicationModule> {
-        // console.log('WildfireApplicationModule.forRoot')
+        // console.log('PitApplicationModule.forRoot')
         const doc = window[ 'document' ]
 
         const style = doc.createElement( 'style' )

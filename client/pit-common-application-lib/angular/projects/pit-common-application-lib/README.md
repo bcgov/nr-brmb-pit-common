@@ -1,4 +1,4 @@
-# PitApplicationUi
+# PIT Common Application Lib
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
@@ -14,11 +14,3 @@ Run `ng build pit-common-application-lib` to build the project. The build artifa
 ## Publishing
 
 After building your library with `ng build pit-common-application-lib`, go to the dist folder `cd dist/pit-common-application-lib` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test pit-common-application-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
