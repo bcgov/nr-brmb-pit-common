@@ -1,0 +1,17 @@
+<div class="header">
+    <ng-content select="pit-header"></ng-content>
+</div>
+
+<div class="body">
+    <ng-container *ngIf="!isInitializing">
+        <div class="content" cdkScrollable>
+            <ng-content></ng-content>
+        </div>
+
+        <div class="backdrop" (click)="onBackdropClick()"></div>
+
+        <div class="menu" [@menu-collapsed-expanded]="menuState">
+            <ng-content select="pit-menu"></ng-content>
+        </div>
+    </ng-container>
+</div>

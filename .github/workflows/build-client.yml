@@ -8,8 +8,8 @@ on:
         required: true
         type: choice
         options:
+          - pit-common-application-lib
           - pit-common-core-lib
-          # add the second library pit-common-application-lib as an option here once it's ready
 
 env:
   NPMRC: ${{ secrets.NPMRC }} 

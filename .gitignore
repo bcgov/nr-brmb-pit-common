@@ -26,3 +26,5 @@ client/pit-core-lib/angular/node_modules/
 client/pit-common-core-lib/angular/.angular
 client/pit-common-core-lib/angular/dist/
 client/pit-common-core-lib/angular/node_modules/
+client/pit-common-application-lib/angular/.editorconfig
+client/pit-common-application-lib/angular/.gitignore
