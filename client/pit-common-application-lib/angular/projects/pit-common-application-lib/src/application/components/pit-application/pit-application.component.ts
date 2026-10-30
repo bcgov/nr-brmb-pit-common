@@ -2,7 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, HostBinding, Input } from '@angular/core';
 import { applicationMetrics } from '../../application.metrics';
 import { BaseComponent } from '../base.component';
-import { NgIf } from '@angular/common';
+
 import { CdkScrollable } from '@angular/cdk/scrolling';
 
 @Component({
@@ -27,7 +27,7 @@ import { CdkScrollable } from '@angular/cdk/scrolling';
             ])
         ])
     ],
-    imports: [NgIf, CdkScrollable]
+    imports: [CdkScrollable]
 })
 export class PitApplicationComponent extends BaseComponent {
     @Input() isInitializing: boolean = false

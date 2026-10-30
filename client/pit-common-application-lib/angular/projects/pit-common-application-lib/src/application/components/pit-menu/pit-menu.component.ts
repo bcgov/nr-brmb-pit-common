@@ -4,7 +4,7 @@ import { PitMenuState } from "../../application.config";
 import { BaseComponent } from "../base.component";
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { applicationMetrics } from '../../application.metrics';
-import { NgFor, NgIf } from "@angular/common";
+
 import { MatTooltip } from "@angular/material/tooltip";
 import { PitIconComponent } from "../pit-icon/pit-icon.component";
 
@@ -42,7 +42,7 @@ import { PitIconComponent } from "../pit-icon/pit-icon.component";
             ])
         ])
     ],
-    imports: [NgFor, NgIf, RouterLink_1, MatTooltip, PitIconComponent]
+    imports: [RouterLink_1, MatTooltip, PitIconComponent]
 })
 export class PitMenuComponent extends BaseComponent {
     _menu: PitMenuItems
