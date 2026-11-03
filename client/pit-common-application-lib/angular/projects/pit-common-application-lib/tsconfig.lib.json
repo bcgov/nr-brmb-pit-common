@@ -6,6 +6,8 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "types": []
   },
   "angularCompilerOptions": {
