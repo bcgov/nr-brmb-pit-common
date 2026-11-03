@@ -14,10 +14,10 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "nodenext",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "es2020",
+    "module": "nodenext",
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
