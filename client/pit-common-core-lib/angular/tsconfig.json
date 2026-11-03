@@ -15,10 +15,10 @@
       "paths": {},
       "declaration": false,
       "experimentalDecorators": true,
-      "moduleResolution": "nodenext",
+      "moduleResolution": "bundler",
       "importHelpers": true,
       "target": "ES2022",
-      "module": "nodenext",
+      "module": "preserve",
       "useDefineForClassFields": false
     },
     "angularCompilerOptions": {
