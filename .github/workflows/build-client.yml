@@ -61,7 +61,7 @@ jobs:
       - name: Publish package
         run: |
           cd client/${{ inputs.MICROSERVICE_NAME }}/angular/dist/${{ inputs.MICROSERVICE_NAME }}
-          npm publish
+          npm publish --tag=latest
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
