@@ -1,25 +1,31 @@
 {
-    "name": "pit-common-core-lib",
-    "version": "1.0.0-SNAPSHOT",
-    "scripts": {
-        "build": "ng build --configuration production pit-common-core-lib"
-    },
-    "private": true,
-    "devDependencies": {
-        "@angular-devkit/build-angular": "19.2.27",
-        "@angular/cli": "19.2.27",
-        "@angular/common": "19.2.25",
-        "@angular/compiler": "19.2.25",
-        "@angular/compiler-cli": "19.2.25",
-        "@angular/core": "19.2.25",
-        "@angular/platform-browser": "19.2.25",
-        "@angular/platform-browser-dynamic": "19.2.25",
-        "@angular/router": "19.2.25",
-        "@ngrx/store": "19.2.1",
-        "angular-oauth2-oidc": "19.0.0",
-        "moment": "2.30.1",
-        "ng-packagr": "19.2.2",
-        "rxjs": "7.8.2",
-        "typescript": "5.8.3"
-    }
+  "name": "pit-common-core-lib",
+  "version": "1.0.0-SNAPSHOT",
+  "scripts": {
+    "build": "ng build --configuration production pit-common-core-lib"
+  },
+  "private": true,
+  "devDependencies": {
+    "@angular/build": "21.2.29",
+    "@angular/cli": "21.2.29",
+    "@angular/common": "21.2.25",
+    "@angular/compiler": "21.2.25",
+    "@angular/compiler-cli": "21.2.25",
+    "@angular/core": "21.2.25",
+    "@angular/platform-browser": "21.2.25",
+    "@angular/router": "21.2.25",
+    "@ngrx/store": "21.1.1",
+    "angular-oauth2-oidc": "21.0.3",
+    "moment": "2.31.0",
+    "ng-packagr": "21.2.7",
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1",
+    "typescript": "5.9.3"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "lmdb": true,
+    "msgpackr-extract": true,
+    "@parcel/watcher": true
+  }
 }

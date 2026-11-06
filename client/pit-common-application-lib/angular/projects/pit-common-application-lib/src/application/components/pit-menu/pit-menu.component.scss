@@ -35,6 +35,7 @@
     justify-content: stretch;
     align-items: stretch;
     height: 100%;
+    transition: width 0.25s;
 
     .header {
         display: none;
@@ -128,6 +129,14 @@
         }
 
     }
+}
+
+:host-context( .menu-collapsed ) {
+    width: var(--pit-menu-collapsed-width);
+}
+
+:host-context( .menu-expanded ) {
+    width: var(--pit-menu-expanded-width);
 }
 
 :host-context( .device-desktop ) {

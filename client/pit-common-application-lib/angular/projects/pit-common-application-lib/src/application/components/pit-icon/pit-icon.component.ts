@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { MatIconRegistry, MatIcon } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'pit-icon',
     templateUrl: './pit-icon.component.html',
     styleUrls: ['./pit-icon.component.scss'],
     host: { 'class': 'mat-typography' },
-    imports: [NgIf, MatIcon]
+    imports: [MatIcon]
 })
 export class PitIconComponent {
     @Input() iconName: string

@@ -2,9 +2,6 @@ import { Component, EventEmitter, HostBinding, Input, Output } from "@angular/co
 import { NavigationEnd, Router, UrlTree, RouterLink as RouterLink_1 } from "@angular/router";
 import { PitMenuState } from "../../application.config";
 import { BaseComponent } from "../base.component";
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { applicationMetrics } from '../../application.metrics';
-import { NgFor, NgIf } from "@angular/common";
 import { MatTooltip } from "@angular/material/tooltip";
 import { PitIconComponent } from "../pit-icon/pit-icon.component";
 
@@ -12,37 +9,7 @@ import { PitIconComponent } from "../pit-icon/pit-icon.component";
     selector: 'pit-menu',
     templateUrl: './pit-menu.component.html',
     styleUrls: ['./pit-menu.component.scss'],
-    animations: [
-        trigger('menu-collapsed-expanded', [
-            state('collapsed', style({
-                'width': applicationMetrics[0].variables['--pit-menu-collapsed-width']
-            })),
-            state('expanded', style({
-                'width': applicationMetrics[0].variables['--pit-menu-expanded-width']
-            })),
-            transition('collapsed => expanded', [
-                animate('0.25s')
-            ]),
-            transition('expanded => collapsed', [
-                animate('0.25s')
-            ])
-        ]),
-        trigger('label-collapsed-expanded', [
-            state('collapsed', style({
-                'opacity': '0'
-            })),
-            state('expanded', style({
-                'opacity': '1'
-            })),
-            transition('collapsed => expanded', [
-                animate('0.25s')
-            ]),
-            transition('expanded => collapsed', [
-                animate('0.25s')
-            ])
-        ])
-    ],
-    imports: [NgFor, NgIf, RouterLink_1, MatTooltip, PitIconComponent]
+    imports: [RouterLink_1, MatTooltip, PitIconComponent]
 })
 export class PitMenuComponent extends BaseComponent {
     _menu: PitMenuItems
@@ -55,10 +22,6 @@ export class PitMenuComponent extends BaseComponent {
     get menuItems() { return this._menu }
 
     @Output() activeItemChanged = new EventEmitter<PitMenuItem>();
-
-    @HostBinding( '@menu-collapsed-expanded' ) get animation() {
-        return this.menuState
-    }
 
     tooltipShowDelay = 300
 
@@ -163,4 +126,3 @@ export class ActionTrigger {
         this.actionTriggered.emit(this)
     }
 }
-

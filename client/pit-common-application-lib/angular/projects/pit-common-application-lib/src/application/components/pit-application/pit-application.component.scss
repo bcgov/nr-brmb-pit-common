@@ -28,6 +28,7 @@
             flex-shrink: 0;
             position: relative;
             z-index: 2;
+            transition: width 0.25s;
         }
 
         .content {
@@ -51,6 +52,18 @@
 
     .footer {
         flex-shrink: 0;
+    }
+}
+
+:host-context( .menu-collapsed ) {
+    .body .menu {
+        width: var(--pit-menu-collapsed-width);
+    }
+}
+
+:host-context( .menu-expanded ) {
+    .body .menu {
+        width: var(--pit-menu-expanded-width);
     }
 }
 

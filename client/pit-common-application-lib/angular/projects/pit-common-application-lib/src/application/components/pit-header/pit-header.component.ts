@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BaseComponent } from '../base.component';
 import { PitMenuItems } from '../pit-menu/pit-menu.component';
-import { NgIf, NgFor } from '@angular/common';
+
 import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
 import { PitIconComponent } from '../pit-icon/pit-icon.component';
 
@@ -9,7 +9,7 @@ import { PitIconComponent } from '../pit-icon/pit-icon.component';
     selector: 'pit-header',
     templateUrl: './pit-header.component.html',
     styleUrls: ['./pit-header.component.scss'],
-    imports: [NgIf, MatMenuTrigger, PitIconComponent, MatMenu, NgFor, MatMenuItem]
+    imports: [MatMenuTrigger, PitIconComponent, MatMenu, MatMenuItem]
 })
 export class PitHeaderComponent extends BaseComponent {
     @Input() useAppLogo: boolean = true
