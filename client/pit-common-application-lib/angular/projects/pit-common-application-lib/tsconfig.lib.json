@@ -6,11 +6,9 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
-    "types": [],
-    "lib": [
-      "dom",
-      "es2018"
-    ]
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "types": []
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,

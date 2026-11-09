@@ -12,3 +12,4 @@ export { AuthenticationInterceptor } from './lib/interceptors/authentication-int
 export { SortDirection } from './lib/search/models/sort/sort-direction';
 export { SearchState, initialState } from './lib/search/store/state';
 export { searchReducer } from './lib/search/store/reducers';
+export type { SearchActions } from './lib/search/store/actions';
